@@ -1,62 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jose Picard - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleLanguage() {
+            const elements = document.querySelectorAll("[data-es]");
+            elements.forEach(el => {
+                const temp = el.innerHTML;
+                el.innerHTML = el.getAttribute("data-es");
+                el.setAttribute("data-es", temp);
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Jose Picard</h1>
-        <p>Estudiante Escuela Técnica | Orientación Programación</p>
+        <p data-es="Estudiante Escuela Técnica | Orientación Programación">Technical School Student | Programming Focus</p>
+        <button onclick="toggleLanguage()" style="font-size: 12px; padding: 5px;">Español</button>
         <nav>
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#" data-es="Inicio">Home</a></li>
+                <li><a href="#sobre-mi" data-es="Sobre mí">About Me</a></li>
+                <li><a href="#proyectos" data-es="Proyectos">Projects</a></li>
+                <li><a href="#habilidades" data-es="Habilidades">Skills</a></li>
+                <li><a href="#contacto" data-es="Contacto">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
         <section id="sobre-mi" class="bienvenida">
-            <h2>Sobre mí</h2>
-            <p>Me gusta jugar Roblox y desarmar aparatos para ver cómo funcionan. Siempre estoy buscando aprender cosas nuevas y mejorar mis habilidades. Mi objetivo es convertirme en un excelente programador y contribuir a proyectos innovadores.</p>
+            <h2 data-es="Sobre mí">About Me</h2>
+            <p data-es="Me gusta jugar Roblox y desarmar aparatos para ver cómo funcionan. Siempre estoy buscando aprender cosas nuevas y mejorar mis habilidades. Mi objetivo es convertirme en un excelente programador y contribuir a proyectos innovadores.">
+                I enjoy playing Roblox and taking apart devices to see how they work. I'm always looking to learn new things and improve my skills. My goal is to become an excellent programmer and contribute to innovative projects.</p>
         </section>
 
         <section id="proyectos">
-            <h2>Proyectos</h2>
+            <h2 data-es="Proyectos">Projects</h2>
             <div class="proyecto">
                 <h3>Tinyshark</h3>
-                <p>Un clon ligero de Wireshark, la aplicación para análisis de redes. Creado con el fin de ser más accesible y fácil de usar para estudiantes y profesionales.</p>
+                <p data-es="Un clon ligero de Wireshark, la aplicación para análisis de redes. Creado con el fin de ser más accesible y fácil de usar para estudiantes y profesionales.">
+                    A lightweight clone of Wireshark, the network analysis application. Created to be more accessible and easier to use for students and professionals.</p>
             </div>
             <div class="proyecto">
-                <h3>DIP - Plataforma Descentralizada de Iniciativas Positivas</h3>
-                <p>Una plataforma en desarrollo que busca fomentar iniciativas positivas y descentralizadas. Actualmente en progreso.</p>
+                <h3>DIP - Decentralized Platform for Positive Initiatives</h3>
+                <p data-es="Una plataforma en desarrollo que busca fomentar iniciativas positivas y descentralizadas. Actualmente en progreso.">
+                    A platform in development that aims to promote positive and decentralized initiatives. Currently in progress.</p>
             </div>
         </section>
 
         <section id="habilidades">
-            <h2>Habilidades</h2>
+            <h2 data-es="Habilidades">Skills</h2>
             <ul>
-                <li>Programación en Python</li>
-                <li>Pensamiento lateral</li>
-                <li>Análisis y resolución de problemas</li>
-                <li>Aprendo rápido</li>
+                <li data-es="Programación en Python">Python Programming</li>
+                <li data-es="Pensamiento lateral">Lateral Thinking</li>
+                <li data-es="Análisis y resolución de problemas">Problem Analysis and Solving</li>
+                <li data-es="Aprendo rápido">Fast Learner</li>
             </ul>
         </section>
 
         <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Si quieres contactarme, puedes hacerlo a través de mi Twitch: <a href="https://www.twitch.tv/josepicaxd" target="_blank">Twitch - josepicaxd</a></p>
+            <h2 data-es="Contacto">Contact</h2>
+            <p data-es="Si quieres contactarme, puedes hacerlo a través de mi Twitch: ">
+                If you want to contact me, you can do so through my Twitch: <a href="https://www.twitch.tv/josepicaxd" target="_blank">Twitch - josepicaxd</a></p>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Jose Picard. Todos los derechos reservados.</p>
-    </footer>
 </body>
 </html>
